@@ -9,9 +9,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://qcmsofts.github.io//favicon.ico?v=1558100993175">
+<link rel="shortcut icon" href="https://qcmsofts.github.io//favicon.ico?v=1558103527958">
 <link rel="stylesheet" href="https://qcmsofts.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -29,7 +35,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://qcmsofts.github.io/">
-        <img src="https://qcmsofts.github.io//images/avatar.png?v=1558100993175" class="site-logo">
+        <img src="https://qcmsofts.github.io//images/avatar.png?v=1558103527958" class="site-logo">
         <h1 class="site-title">青春美</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -94,13 +100,23 @@
             <h2 class="post-title">关于</h2>
             <div class="post-date">2019-01-25</div>
             
+              <div class="feature-container" style="background-image: url('https://qcmsofts.github.io//post-images/about.JPG')">
+              </div>
+            
             <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+              <p>👏 <strong>青春美软件工作室</strong>！<br>
+✍️  <strong>青春美</strong> 成立于2003年，由武汉市汉口北高中靖老师业余组建，致力于教育软件开发。</p>
 
             </div>
             
             
 
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
             
 
           </div>
@@ -125,6 +141,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '4181f81e8ffefc16a709',
+        clientSecret: 'bbc5236cd570ab845abef3dcce693374e70df2e4',
+        repo: 'qcmsofts.github.io',
+        owner: 'qcmsofts',
+        admin: ['qcmsofts'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
